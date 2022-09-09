@@ -1,5 +1,5 @@
 # Semester-Project
-Develop an online shopping site that can perform the following
+# Develop an online shopping site that can perform the following
   • Must be database driven
     o You may choose any dB
   • Create/Modify User Information
