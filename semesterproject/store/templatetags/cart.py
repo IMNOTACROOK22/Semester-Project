@@ -1,5 +1,6 @@
 from django import template
 
+
 register = template.Library ()
 
 
@@ -31,5 +32,8 @@ def total_cart_price(products, cart):
     sum = 0;
     for p in products:
         sum += price_total (p, cart)
-
-    return sum
+    
+    #if coupon: 
+     #    return sum * (1 - coupon.percentDiscount)
+    #else: 
+    return sum 

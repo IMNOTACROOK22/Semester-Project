@@ -3,7 +3,7 @@ from .models.product import Products
 from .models.category import Category
 from .models.customer import Customer
 from .models.orders import Order
-
+from .models.coupon import Coupon
 
 class AdminProduct(admin.ModelAdmin):
     list_display = ['name', 'price', 'category']
@@ -17,6 +17,7 @@ admin.site.register(Products,AdminProduct)
 admin.site.register(Category)
 admin.site.register(Customer)
 admin.site.register(Order)
+admin.site.register(Coupon)
 
 
 
