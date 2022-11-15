@@ -6,7 +6,6 @@
 {% load custom_filter %}
 <div class="container">
    <div class="border rounded p-4 m-4">
-        <p class="display-4 pl-4 ml-4 btn btn-success rounded-pill">Your Cart</p>
         <hr>
         <table class="table">
             <thead>
@@ -42,7 +41,12 @@
                     <th>{{products|total_cart_price:request.session.cart|currency}}</th>
                 </tr>
             </tfoot>
+            
         </table>
+        <div class="form-group">
+          <label for="">Coupon</label>
+          <input type="text" name="coupon" id="" class="form-control" placeholder="" aria-describedby="helpId">
+        </div>
         <hr>
         <div class="m-3 p-3">
             <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-success border rounded  col-lg-3 float-right">Check out</a>
