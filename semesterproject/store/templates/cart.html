@@ -5,7 +5,8 @@
 {% load cart %}
 {% load custom_filter %}
 <div class="container">
-   <div class="border rounded p-4 m-4">
+   <div style="background-color:lightgrey" class="border rounded p-4 m-4">
+    <p class="display-4 pl-4 ml-4">Shopping Cart</p>
         <hr>
         <table class="table">
             <thead>
@@ -23,13 +24,13 @@
                 {% for product in products %}
                 <tr>
                     <td>{{forloop.counter}}</td>
-                    <td><img style="height: 80px;" class="rounded" src="{{product.image.url}}" alt=""></td>
+                    <td><img style="height: 80px;" class="rounded-square" src="{{product.image.url}}" alt=""></td>
                     <td>{{product.name}}</td>
                     <td>{{product.price|currency}}</td>
                     <td>{{product|cart_quantity:request.session.cart}}</td>
                     <td>{{product|price_total:request.session.cart|currency}}</td>
                 </tr>
-
+float
                 {% endfor %}
                
             </tbody>
@@ -45,11 +46,11 @@
         </table>
         <div class="form-group">
           <label for="">Coupon</label>
-          <input type="text" name="coupon" id="" class="form-control" placeholder="" aria-describedby="helpId">
+          <input style="width: 40%;background-color:whitesmoke" type="text" name="coupon" id="" class="form-control" placeholder="" aria-describedby="helpId">
         </div>
         <hr>
         <div class="m-3 p-3">
-            <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-success border rounded  col-lg-3 float-right">Check out</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModal" style="background-color:#0d6efd;color:white" class="btn btn-outline-success border rounded  col-lg-3 float-right">Check out</a>
         </div>
    </div>
 </div>
@@ -84,7 +85,7 @@
                     <input type="text" name="phone" id="" class="form-control" placeholder="" aria-describedby="helpId">
                   </div>
 
-                  <input type="submit" class="btn float-right btn-outline-success col-lg-6" value="Check out">
+                  <input type="submit" style="background-color:#0d6efd;color:white;" class="btn float-right btn-outline-success col-lg-6" value="Check out">
             </form>
           </div>
         </div>
