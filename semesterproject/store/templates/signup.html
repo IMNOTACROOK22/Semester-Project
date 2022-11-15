@@ -8,12 +8,12 @@
     <div class="p-3 m-3">
 
         
-        <div class="col-lg-5 rounded mx-auto border pt-4">
+        <div style="background-color:lightgrey; width: 50%;" class="col-lg-5 rounded mx-auto border pt-1">
             <div class="text-center col">
             <!-- <hr> -->
             <hr>
             </div>
-            <h3 class="alert alert-success rounded-pill" style="text-align:center">Create an Account</h3>
+            <h3 class="alert alert-success" style="text-align:center;background-color:rgb(38, 38, 38);color:white;">Create an Account</h3>
             <form action="/signup" method="POST">
                 
                 {% csrf_token %}
@@ -24,7 +24,7 @@
                 </div>
                 {% endif %}
                 <!-- firstname -->
-                <div class="form-group">
+                <div style="width: 80%;margin-left: 10%;" class="form-group">
                     <label for="">First Name</label>
                     <input type="text" name="firstname"
                      id="" value="{{values.first_name}}" class="form-control form-control-sm" 
@@ -32,7 +32,7 @@
                 </div>
 
                 <!-- last name -->
-                <div class="form-group">
+                <div style="width: 80%;margin-left: 10%;" class="form-group">
                     <label for="">Last Name</label>
                     <input type="text" name="lastname" 
                     id="" value="{{values.last_name}}" class="form-control form-control-sm"
@@ -40,16 +40,16 @@
                 </div>
 
                 <!-- phone -->
-                <div class="form-group">
+                <div style="width: 80%;margin-left: 10%;" class="form-group">
                     <label for="">Phone</label>
                     <input type="text" name="phone" 
                     id="" class="form-control form-control-sm"
                     value="{{values.phone}}"
-                    placeholder="1236543210"
+                    placeholder="(xxx)-xxx-xxxx"
                     >
                 </div>
                 <!-- email -->
-                <div class="form-group">
+                <div style="width: 80%;margin-left: 10%;" class="form-group">
                     <label for="">Email</label>
                     <input required type="email" name="email" id=""
                     value="{{values.email}}" 
@@ -58,7 +58,7 @@
 
 
                 <!-- password -->
-                <div class="form-group">
+                <div style="width: 80%;margin-left: 10%;" class="form-group">
                     <label for="">Password</label>
                     <input type="password" 
                     name="password" 
@@ -66,13 +66,13 @@
                      class="form-control form-control-sm">
                 </div>
 
-                <!--Checkme button-->
+                <!--Checkme button
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label d-grid gap-2" for="exampleCheck1">Check me out</label>
-                </div>
+                </div>-->
                 <hr>
-                <button type="submit" class="btn btn-sm btn-primary col-lg-12">Create an account</button>
+                <button style="margin-bottom: 15px;width: 80%;margin-left: 10%;" type="submit" class="btn btn-sm btn-primary col-lg-12">Create an account</button>
             </form>
         </div>
     </div>
